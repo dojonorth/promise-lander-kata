@@ -1,19 +1,17 @@
 var CommandModule = require('../lib/command-module');
 
 var Lander = function(distance, fuel) {
-    this.distance = distance;
-    this.fuel = fuel;
-    this.commandModule = new CommandModule();
+    this.commandModule = new CommandModule(distance, fuel);
 };
 
 Lander.prototype.engageThrusters = function(distance) {
-    if (this.fuel >= distance) {
-        this.distance += distance;
-    }
+    var args = []
+    args['distance'] = distance
+    this.commandModule.sendCommand('engageThrusters', args);
 };
 
 Lander.prototype.calculateDistance = function() {
-    return this.distance;
+    return this.commandModule.sendCommand('calculateDistance');
 };
 
 module.exports = Lander;

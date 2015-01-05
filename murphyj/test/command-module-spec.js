@@ -7,10 +7,17 @@ describe('Command Module', function() {
         var args = {
             'distance': 10
         };
-        commandModule.sendCommand('engageThrusters', args).then(
-        function(currentDistance) {
-            expect(currentDistance).toBe(110);
-        });
+        var currentDistance = commandModule.dyn_functions.engageThrusters(args);
+        expect(currentDistance).toBe(110);
+    });
 
+    it('should not move the lander if there isnt enough fuel available', function() {
+        commandModule = new CommandModule(100, 10);
+        var args = {
+            'distance': 20
+        };
+
+        var currentDistance = commandModule.dyn_functions.engageThrusters(args);
+        expect(currentDistance).toBe(100);
     });
 });

@@ -1,0 +1,18 @@
+{
+  "name": "promise-lander-kata",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-jasmine-node": "bbc-sport/grunt-jasmine-node#v0.4.0",
+    "grunt-jsxhint": "^0.4.0",
+    "jit-grunt": "^0.9.0",
+    "jshint": "^2.5.10",
+    "react-tools": "^0.12.2"
+  },
+  "dependencies": {
+    "bluebird": "^2.3.11",
+    "baconjs": "0.7.42"
+  }
+}

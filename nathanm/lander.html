@@ -1,5 +1,18 @@
 <html>
 <head>
-<script src="app/lander.js"></script>
+    <script src="node_modules/bluebird/js/browser/bluebird.js"></script>
+    <script src="node_modules/baconjs/dist/Bacon.js"></script>
+    <script src="app/lander-browser.js"></script>
+    <script>
+        function log(message) {
+            console.log(message);
+        }
+
+        deploySoilSampler(true, function(result) {
+            log(result);
+        });
+
+        deploySoilSamplerP(true).then(log);
+    </script>
 </head>
 </html>

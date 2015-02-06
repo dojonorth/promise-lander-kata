@@ -20,29 +20,37 @@ There are several tasks below. Write code to do each.
 Have a go with both the callback and the promises variants.
 Feel free to have a go in different languages.
 
-For the JavaScript versions, either use the test harness provided, or load the code in the browser using the lander.html file
+For the JavaScript versions, either use the test harness provided, or load the code in the browser using the
 
-To use the test harness you'll need node installed
+    lander.html 
+    
+file
+
+To use the test harness you'll need node and grunt installed
 
 Just run
 
-grunt test from the command line.
+    grunt test 
+
+from the command line. The node modules have been installed locally already.
 
 The API to the lander:
 
-deployLaser
-deploySoilSampler
-deployAtmosphereSampler
-sendResults
-releaseHarpoon
-fireLaunchThrusters
-plotCourseToEarth
-sendDistressSignal
+
+# deployLaser
+# deploySoilSampler
+# deployAtmosphereSampler
+# sendResults
+# releaseHarpoon
+# fireLaunchThrusters
+# plotCourseToEarth
+# sendDistressSignal
 
 Tasks:
-1) deploy the soil sampler
-2) deploy the soil sampler, send the results of the laser experiment when complete
-3) deploy the soil sampler and the atmosphere sampler at the same time (i.e. don't wait for one to complete before doing the other)
-4) deploy the soil sampler and the atmosphere sampler in parallel, as above. When both are complete send both sets of results together
-5) release the harpoon. When this has completed, fire launch thrusters. When this has completed, plot course to earth
-6) fire launch thrusters. If successful, plot course for earth, otherwise, send distress signal
+
+1. deploy the soil sampler
+2. deploy the soil sampler, send the results of the laser experiment when complete
+3. deploy the soil sampler and the atmosphere sampler at the same time (i.e. don't wait for one to complete before doing the other)
+4. deploy the soil sampler and the atmosphere sampler in parallel, as above. When both are complete send both sets of results together
+5. release the harpoon. When this has completed, fire launch thrusters. When this has completed, plot course to earth
+6. fire launch thrusters. If successful, plot course for earth, otherwise, send distress signal

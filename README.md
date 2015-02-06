@@ -37,14 +37,14 @@ from the command line. The node modules have been installed locally already.
 The API to the lander:
 
 
-# deployLaser
-# deploySoilSampler
-# deployAtmosphereSampler
-# sendResults
-# releaseHarpoon
-# fireLaunchThrusters
-# plotCourseToEarth
-# sendDistressSignal
+* deployLaser
+* deploySoilSampler
+* deployAtmosphereSampler
+* sendResults
+* releaseHarpoon
+* fireLaunchThrusters
+* plotCourseToEarth
+* sendDistressSignal
 
 Tasks:
 

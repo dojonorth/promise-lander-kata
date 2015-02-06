@@ -1,5 +1,11 @@
 var Promise = require('bluebird');
 
+function sendResults(results, success, failure) {
+  setTimeout(function() {
+    success('sent: ' + results);
+  }, 3000);
+}
+
 function deployLaser(pass, success, failure) {
     setTimeout(function(){
         if (pass) {
@@ -83,6 +89,7 @@ module.exports = {
     deployLaser : deployLaser,
     deploySoilSampler : deploySoilSampler,
     deployAtmosphereSampler : deployAtmosphereSampler,
+    sendResults : sendResults,
     releaseHarpoon : releaseHarpoon,
     fireLaunchThrusters : fireLaunchThrusters,
     plotCourseToEarth : plotCourseToEarth,
@@ -91,8 +98,9 @@ module.exports = {
     deployLaserP : createPromiseVersion(deployLaser),
     deploySoilSamplerP : createPromiseVersion(deploySoilSampler),
     deployAtmosphereSamplerP : createPromiseVersion(deployAtmosphereSampler),
+    sendResultsP : createPromiseVersion(sendResults),
     releaseHarpoonP : createPromiseVersion(releaseHarpoon),
     fireLaunchThrustersP : createPromiseVersion(fireLaunchThrusters),
     plotCourseToEarthP : createPromiseVersion(plotCourseToEarth),
-    sendDistressSignalP : createPromiseVersion(sendDistressSignal),
+    sendDistressSignalP : createPromiseVersion(sendDistressSignal)
 }
